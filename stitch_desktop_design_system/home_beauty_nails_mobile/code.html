@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beauty Nails — Маникюр и педикюр премиум-класса</title>
+<!-- Google Fonts -->
+<script type="text/javascript" nonce="d41225dbcb4e4f8b82943c9cd04" src="//local.adguard.org?ts=1784545454827&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2IzZTVjMDY4YWFkMTRkM2E4NzVjMzUyNTg0MTk4NTQzEgsSBxDi9sHJ1wsYAZIBIwoKcHJvamVjdF9pZBIVQhM1NDExMzQ1NTQzOTgwMjI2MTk5%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="d41225dbcb4e4f8b82943c9cd04" src="//local.adguard.org?ts=1784545454827&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#f1d3d6",
+                        "on-primary-fixed-variant": "#900038",
+                        "outline": "#8f6f73",
+                        "secondary-container": "#fe7faa",
+                        "on-secondary-fixed-variant": "#831e48",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb1c7",
+                        "on-tertiary-fixed-variant": "#005227",
+                        "bg-light-soft": "#FFF7FA",
+                        "primary-fixed": "#ffd9de",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "accent-deep": "#C2185B",
+                        "tertiary-fixed": "#89faa8",
+                        "tertiary-container": "#008644",
+                        "surface-container-highest": "#fadbde",
+                        "on-background": "#28171a",
+                        "inverse-on-surface": "#ffecee",
+                        "surface-tint": "#bc004b",
+                        "on-primary-container": "#fffbff",
+                        "primary-fixed-dim": "#ffb2be",
+                        "on-surface": "#28171a",
+                        "on-secondary": "#ffffff",
+                        "bg-dark-card": "#232323",
+                        "tertiary-fixed-dim": "#6ddd8e",
+                        "inverse-primary": "#ffb2be",
+                        "surface-container-high": "#ffe1e4",
+                        "secondary-fixed": "#ffd9e2",
+                        "background": "#fff8f7",
+                        "primary": "#b80049",
+                        "on-secondary-fixed": "#3e001c",
+                        "on-surface-variant": "#5b3f43",
+                        "surface": "#fff8f7",
+                        "surface-variant": "#fadbde",
+                        "on-tertiary-fixed": "#00210c",
+                        "error": "#F44336",
+                        "tertiary": "#006a34",
+                        "accent-pale": "#F8BBD0",
+                        "error-container": "#ffdad6",
+                        "warning": "#FF9800",
+                        "surface-container": "#ffe9ea",
+                        "on-primary-fixed": "#400014",
+                        "on-secondary-container": "#77123f",
+                        "surface-container-low": "#fff0f1",
+                        "outline-variant": "#e4bdc2",
+                        "primary-container": "#e2165f",
+                        "accent-soft": "#F06292",
+                        "secondary": "#a23760",
+                        "surface-bright": "#fff8f7",
+                        "inverse-surface": "#3e2b2e",
+                        "on-tertiary-container": "#f6fff3",
+                        "success": "#4CAF50"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding-mobile": "3rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "section-padding": "5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "label-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 248, 247, 0.7);
+            border-bottom: 1px solid rgba(184, 0, 73, 0.1);
+        }
+        .service-card-glass {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .framer-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Hide scrollbar for clean slider look */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-accent-pale selection:text-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">Beauty Nails</span>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity">language</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md scale-95 active:scale-90 transition-transform">Book Now</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative px-gutter py-12 overflow-hidden">
+<div class="relative z-10 framer-fade-in">
+<span class="inline-block py-1 px-3 bg-accent-pale text-accent-deep rounded-full font-label-md mb-4">Премиум Сервис</span>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-background mb-4">
+                    Искусство безупречного <span class="text-primary italic">маникюра</span>
+</h1>
+<p class="text-on-surface-variant font-body-md mb-8 leading-relaxed max-w-xs">
+                    Почувствуйте роскошь ухода в самом сердце города. Мы создаем не просто ногти, а ваше настроение.
+                </p>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+                        Записаться онлайн
+                    </button>
+<button class="w-full bg-surface-container-low text-primary py-4 rounded-xl font-headline-md border border-primary/10 active:scale-[0.98] transition-transform">
+                        Посмотреть меню
+                    </button>
+</div>
+</div>
+<!-- Hero Image Bento-ish Layout -->
+<div class="mt-12 relative h-80 rounded-3xl overflow-hidden framer-fade-in stagger-1">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A high-end luxury manicure salon interior with plush velvet seating in soft pink tones, gold accents on marble tables, and soft glowing ambient lighting. The atmosphere is sophisticated and minimalist, echoing a premium beauty aesthetic with high-key lighting and a sense of calm. Large windows allow natural daylight to filter through, creating a bright and welcoming space." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5iXvzn2BHkmD3UgzwuWJBK5Nf3fmCr15jhrkyPKwyicizYM5yYUEDiKtQz0hZJp0MfTMABFchpn1nhrZPOlFodE9A8tnUQm_Peu1xcpk2R-vH32gjO4YWeZIgack1LZ9cgDnuWbFvrFHoAENZOhsbUD-GPe4lbm3VJWlR1ZNImgFvwx_T2yZ1Q8kvyytanSGu5QOuuiyByJDZBQrlux1VQBKutfF_cUetyBJwOhSTKCaWP8qFURvjo7AtmwSjgsnX7S_OTrKOlz0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+<!-- Floating Stat Card -->
+<div class="absolute bottom-4 left-4 right-4 service-card-glass p-4 rounded-2xl flex items-center justify-between border border-white/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">star</span>
+</div>
+<div>
+<div class="font-bold text-on-surface text-lg">4.9/5</div>
+<div class="text-xs text-on-surface-variant">Рейтинг в Google</div>
+</div>
+</div>
+<div class="h-8 w-px bg-on-surface-variant/10"></div>
+<div class="text-right">
+<div class="font-bold text-on-surface text-lg">15k+</div>
+<div class="text-xs text-on-surface-variant">Клиентов</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Advantages Bento -->
+<section class="px-gutter py-12 bg-surface-container-lowest">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-8">Почему выбирают нас?</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-primary text-on-primary p-6 rounded-3xl flex flex-col justify-between h-48 framer-fade-in stagger-2">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+<div>
+<h3 class="font-headline-md mb-1">Стерильность 100%</h3>
+<p class="text-sm opacity-90">Медицинские стандарты дезинфекции и одноразовые наборы для каждого гостя.</p>
+</div>
+</div>
+<div class="bg-secondary-container text-on-secondary-container p-6 rounded-3xl flex flex-col justify-between h-48 framer-fade-in stagger-3">
+<span class="material-symbols-outlined text-3xl">brush</span>
+<div>
+<h3 class="font-headline-md mb-1">Топ Мастера</h3>
+<p class="text-xs opacity-90">Опыт от 5 лет.</p>
+</div>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed p-6 rounded-3xl flex flex-col justify-between h-48 framer-fade-in stagger-3">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+<div>
+<h3 class="font-headline-md mb-1">За 4 руки</h3>
+<p class="text-xs opacity-90">Экономия вашего времени.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Services Slider -->
+<section class="py-12">
+<div class="px-gutter flex justify-between items-end mb-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background">Наши услуги</h2>
+<p class="text-on-surface-variant text-sm">Самые популярные позиции</p>
+</div>
+<button class="text-primary font-label-md flex items-center gap-1">Все услуги <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+<div class="flex overflow-x-auto gap-4 px-gutter no-scrollbar snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="min-w-[280px] snap-start bg-white rounded-[2rem] overflow-hidden shadow-sm border border-primary/5">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro close-up of a flawless nude manicure with subtle minimalist nail art. The lighting is soft and luxurious, highlighting the glossy finish and healthy cuticles. The background is a soft-focus velvet fabric in a dusty rose color, maintaining a professional beauty salon aesthetic. High-definition details of the nail texture and reflective shine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpc-mohy4FSNoMQcYOO9WRjkLds9TOz38pNqkuxBJtxInW__576HhBcIAFpr2aFJQeHFnsMn2i0plj-ZeyrCwqcxan84Vemu_ZAjSIdr2RA46ZuR4uhN7F9ULI8AbCgxRz4dNVZqLYKyJByJ-OzSbVjKJHqqQxmPP43htj752eO4XrtwSrbwQS1mbifC4v0Iu5BhY4Y7b2w6WZNmBXaMBTGvXPLBuShp35nbbrAXUHfssBwbUoXAYSYg9XDxGpVCQyMncGyGQfBgE"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-sm">2500 ₽</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-md text-on-background mb-2">Классический Маникюр</h4>
+<p class="text-on-surface-variant text-sm mb-4">Снятие, придание формы, обработка кутикулы и покрытие в один тон.</p>
+<button class="w-full py-3 bg-surface-container text-primary rounded-xl font-label-md hover:bg-primary hover:text-white transition-colors">Забронировать</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] snap-start bg-white rounded-[2rem] overflow-hidden shadow-sm border border-primary/5">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An elegant pedicure session with a model's feet resting on a soft white towel. The toenails are painted in a deep classic red gel polish. A professional master's hand with white gloves is subtly visible in the corner. The setting is clean, modern, and high-end with a professional manicure salon aesthetic. Soft, bright lighting creates a pristine look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUq-invqDc16Tm6BqE4acMSHFuHqBzkVlHHf6rnrfoZ-cGbWMImB565f7nu4KzT0p_FKlajl4gvm7H0LY027h-ncUMF53KgVRbfen5S3M1mJfMIDKF1axNvyOPrtaDjtW4MAHyR6Sk6A2fUBkc7ifeNYRT1m88vdOt8sqjpkydocsRmHtr13J32Ft_hTfKgENkTsnBbQfmzThrB3Mb5bZLhb9SXuYc5P0yB8SeQeA6eTrlWUADokDwFl4pz1Ox2ciOBEetit8nyjM"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-sm">3200 ₽</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-md text-on-background mb-2">SMART-Педикюр</h4>
+<p class="text-on-surface-variant text-sm mb-4">Инновационная обработка стоп дисками для идеальной гладкости.</p>
+<button class="w-full py-3 bg-surface-container text-primary rounded-xl font-label-md hover:bg-primary hover:text-white transition-colors">Забронировать</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[280px] snap-start bg-white rounded-[2rem] overflow-hidden shadow-sm border border-primary/5">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Detailed creative nail art showcasing intricate hand-painted designs with gold leaf and fine lines on a soft beige base. The aesthetic is extremely high-end and artistic. The hands are posed elegantly against a minimal aesthetic background with soft professional studio lighting. The focus is sharp on the artistic details of the manicure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABymn4tAMGw1S_sk8TfUKt4Cywb3FCz9_LwMatEFWYtgOYmFZL4YuA-2F1v6cABvWTfh_PTmJReThRx3tgqOfa4q6wkkkg6TS_ZsJ_fpA4t1L3t_Oq8Hfv5W1QJMh9pZKgJTtLxWd76iIL17K3eWKuW-Vtbm3CB15bkSHqK1yLTtC5Z6Sg1vWfGPbdwp1CGNYXsjAxNCNyr_rApcj7zaxBw3EADePRDEYchjGORxFGJRjpzC4EV5379Oo3k0vic-sCnmKwV2J-7JQ"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-sm">от 4000 ₽</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-md text-on-background mb-2">Дизайнерский Сет</h4>
+<p class="text-on-surface-variant text-sm mb-4">Индивидуальный дизайн любой сложности от наших арт-мастеров.</p>
+<button class="w-full py-3 bg-surface-container text-primary rounded-xl font-label-md hover:bg-primary hover:text-white transition-colors">Забронировать</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Slider -->
+<section class="px-gutter py-12 bg-surface-container-low overflow-hidden">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-8 text-center italic">Голоса наших гостей</h2>
+<div class="relative">
+<div class="flex transition-transform duration-500 ease-out" id="testimonial-track" style="width: 300%;">
+<!-- Testimonial 1 -->
+<div class="w-full px-2">
+<div class="bg-white p-8 rounded-[2.5rem] relative shadow-sm border border-primary/5 text-center">
+<span class="material-symbols-outlined text-accent-pale text-6xl absolute top-4 left-4 opacity-20">format_quote</span>
+<div class="w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling woman with beautiful glowing skin and an elegant hairstyle, looking satisfied and happy in a bright modern beauty salon environment. Soft focused background of the salon interior adds context. High-quality professional photography with a warm and friendly mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuLOJAgGTJFH5iq7MWMCiUzm48mPaojnB_Mda16rTA7-KzhwFmScpAZUUeq_tEjQXxzWdL9Ks3tnP0xKiwbWCAlv_9YgonmM8F5Ub10oakkDTdBqnwTUTeJGAzrKKK6p97vMG59oOgOJ0HOzvAaT3H5Cir1B2aGUmTI0QmDF3RuRXM1KjHpLk2-0cuzK86xEuKipQHR6aONZ1jN4yEu66xcPIIYoE41zyR_lLCfBgc3h1UjWVbjaCxAjHluK-Z1xtodCQhYtXU1N4"/>
+</div>
+<p class="text-on-surface italic mb-6 leading-relaxed">"Это лучший сервис, который я когда-либо встречала. Маникюр держится 4 недели идеально! Обожаю атмосферу этого места."</p>
+<div class="font-bold text-primary">Елена К.</div>
+<div class="text-xs text-on-surface-variant">Постоянный клиент</div>
+</div>
+</div>
+</div>
+<!-- Simple dot pagination -->
+<div class="flex justify-center gap-2 mt-6">
+<div class="w-8 h-1.5 bg-primary rounded-full"></div>
+<div class="w-1.5 h-1.5 bg-primary/20 rounded-full"></div>
+<div class="w-1.5 h-1.5 bg-primary/20 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="px-gutter py-16 text-center">
+<div class="bg-inverse-surface text-on-primary-fixed p-10 rounded-[3rem] relative overflow-hidden">
+
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-4">Готовы к преображению?</h2>
+<p class="mb-8 opacity-80 max-w-xs mx-auto">Запишитесь сейчас и получите скидку 10% на первый визит к топ-мастеру.</p>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline-md shadow-xl active:scale-95 transition-transform">
+                        Записаться сейчас
+                    </button>
+<div class="mt-8 flex justify-center gap-6 text-on-primary-fixed/60">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Центр</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">wifi</span> Free Wi-Fi</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">coffee</span> Coffee</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface">
+<div class="grid grid-cols-1 gap-gutter px-gutter py-12 max-w-container-max mx-auto">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-primary mb-4 block">Beauty Nails</span>
+<p class="text-on-surface-variant text-sm mb-6">Профессиональная студия маникюра и педикюра в центре города. Мы создаем совершенство в деталях.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined filled-icon">account_circle</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-headline-md text-primary mb-4">Услуги</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li>Маникюр</li>
+<li>Педикюр</li>
+<li>Наращивание</li>
+<li>Дизайн</li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-primary mb-4">Компания</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li>О нас</li>
+<li>Мастера</li>
+<li>Контакты</li>
+<li>Цены</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-primary/10">
+<p class="text-xs text-on-surface-variant text-center">© 2024 Beauty Nails Salon. Все права защищены.</p>
+<p class="text-[10px] text-on-surface-variant/50 text-center mt-2 italic">Адрес: Москва, ул. Красоты 12, оф. 302</p>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Only) -->
+<div class="md:hidden fixed bottom-6 left-6 right-6 z-50">
+<div class="bg-inverse-surface/90 backdrop-blur-xl rounded-3xl p-3 flex justify-around items-center shadow-2xl border border-white/10">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined filled-icon">home</span>
+<span class="text-[10px] font-bold">Главная</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-primary-container/60">
+<span class="material-symbols-outlined">spa</span>
+<span class="text-[10px]">Услуги</span>
+</button>
+<button class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center -mt-10 shadow-lg shadow-primary/40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-on-primary text-3xl">add</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-primary-container/60">
+<span class="material-symbols-outlined">face</span>
+<span class="text-[10px]">Мастера</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-primary-container/60">
+<span class="material-symbols-outlined">help</span>
+<span class="text-[10px]">Помощь</span>
+</button>
+</div>
+</div>
+<script>
+        // Simple Interaction Scripts
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate on scroll simple implementation
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('framer-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Micro-interaction for booking buttons
+            const bookingButtons = document.querySelectorAll('button');
+            bookingButtons.forEach(btn => {
+                btn.addEventListener('touchstart', () => {
+                    btn.classList.add('scale-95');
+                });
+                btn.addEventListener('touchend', () => {
+                    btn.classList.remove('scale-95');
+                });
+            });
+        });
+    </script>
+</body></html>

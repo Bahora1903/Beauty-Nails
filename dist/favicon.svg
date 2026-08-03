@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0B2E" />
+      <stop offset="50%" stop-color="#3B0764" />
+      <stop offset="100%" stop-color="#701A75" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE58F" />
+      <stop offset="50%" stop-color="#E6B94D" />
+      <stop offset="100%" stop-color="#996E14" />
+    </linearGradient>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D94" />
+      <stop offset="100%" stop-color="#C1175B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Perfect Circle Background -->
+  <circle cx="256" cy="256" r="250" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="236" fill="none" stroke="url(#goldGrad)" stroke-width="7" opacity="0.9" />
+
+  <!-- Line Art Beauty Silhouette -->
+  <g transform="translate(15, 10)">
+    <!-- Hair & Face Contour Line -->
+    <path d="M 330 60 C 270 40 230 70 210 130 C 195 175 220 230 140 250 C 100 260 100 310 160 330 C 220 350 250 410 240 450" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="9" stroke-linecap="round" />
+
+    <!-- Eyebrow -->
+    <path d="M 235 155 C 265 140 295 150 315 170" 
+          fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" />
+
+    <!-- Closed Eye & Eyelashes -->
+    <path d="M 245 195 C 275 210 305 205 325 185" 
+          fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" />
+    <!-- Lashes -->
+    <path d="M 260 200 L 255 215 M 275 205 L 273 222 M 290 204 L 292 220 M 305 198 L 312 212" 
+          stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Nose Curve -->
+    <path d="M 305 195 C 315 215 310 235 295 245" 
+          fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.9" />
+
+    <!-- Vibrant Pink Lips -->
+    <path d="M 285 268 C 300 262 315 262 330 268 C 315 285 300 285 285 268 Z" fill="url(#pinkGrad)" />
+    <path d="M 292 268 C 300 273 315 273 323 268" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.7" />
+
+    <!-- Chin & Neck Curve -->
+    <path d="M 270 295 C 250 320 200 320 185 370" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+  </g>
+</svg>

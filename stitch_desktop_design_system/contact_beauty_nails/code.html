@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Beauty Nails</title>
+<!-- Tailwind CSS -->
+<script type="text/javascript" nonce="d41225dbcb4e4f8b82943c9cd04" src="//local.adguard.org?ts=1784545454827&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2VhMjdhMTM5ZWRlNTQ4ZTZiMDY0MTEwOTQ5ODRjMzUyEgsSBxDi9sHJ1wsYAZIBIwoKcHJvamVjdF9pZBIVQhM1NDExMzQ1NTQzOTgwMjI2MTk5%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="d41225dbcb4e4f8b82943c9cd04" src="//local.adguard.org?ts=1784545454827&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Framer Motion (Optional via script if needed for micro-interactions, but we'll use CSS for core effects) -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffd9de",
+                    "on-background": "#28171a",
+                    "accent-pale": "#F8BBD0",
+                    "on-tertiary-fixed-variant": "#005227",
+                    "on-primary-fixed": "#400014",
+                    "on-surface": "#28171a",
+                    "accent-deep": "#C2185B",
+                    "on-secondary-container": "#77123f",
+                    "on-tertiary": "#ffffff",
+                    "success": "#4CAF50",
+                    "error": "#F44336",
+                    "secondary-container": "#fe7faa",
+                    "primary": "#b80049",
+                    "inverse-on-surface": "#ffecee",
+                    "on-primary-fixed-variant": "#900038",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#ffb2be",
+                    "on-secondary-fixed": "#3e001c",
+                    "surface-container-highest": "#fadbde",
+                    "on-surface-variant": "#5b3f43",
+                    "surface-dim": "#f1d3d6",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#006a34",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#fadbde",
+                    "outline-variant": "#e4bdc2",
+                    "on-tertiary-container": "#f6fff3",
+                    "surface-container-low": "#fff0f1",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#bc004b",
+                    "bg-light-soft": "#FFF7FA",
+                    "surface-container": "#ffe9ea",
+                    "secondary-fixed-dim": "#ffb1c7",
+                    "background": "#fff8f7",
+                    "secondary-fixed": "#ffd9e2",
+                    "primary-container": "#e2165f",
+                    "warning": "#FF9800",
+                    "on-primary-container": "#fffbff",
+                    "inverse-surface": "#3e2b2e",
+                    "surface-container-high": "#ffe1e4",
+                    "bg-dark-card": "#232323",
+                    "primary-fixed-dim": "#ffb2be",
+                    "surface-container-lowest": "#ffffff",
+                    "accent-soft": "#F06292",
+                    "tertiary-fixed": "#89faa8",
+                    "tertiary-container": "#008644",
+                    "outline": "#8f6f73",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#6ddd8e",
+                    "on-tertiary-fixed": "#00210c",
+                    "secondary": "#a23760",
+                    "surface": "#fff8f7",
+                    "on-secondary-fixed-variant": "#831e48",
+                    "surface-bright": "#fff8f7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding-mobile": "3rem",
+                    "section-padding": "5rem",
+                    "container-max": "1280px",
+                    "gutter": "1.5rem"
+            },
+            "fontFamily": {
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #b80049 0%, #fe7faa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(233, 30, 99, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- Header Section -->
+<header class="fixed top-0 w-full z-50 glass-panel shadow-sm border-b border-white/10">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">Beauty Nails</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Masters</a>
+<a class="font-body-md text-primary border-b-2 border-primary pb-1" href="#">Contact</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Help</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">language</button>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">dark_mode</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md hover:opacity-90 active:scale-95 transition-all shadow-md">Book Now</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-section-padding">
+<!-- Contact & Booking Section -->
+<section class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Side: Contact Details -->
+<div class="lg:col-span-5 space-y-10">
+<div class="space-y-4">
+<span class="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full text-label-md font-medium">Свяжитесь с нами</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background leading-tight">Мы всегда рады <span class="text-gradient">новым гостям</span></h1>
+<p class="font-body-lg text-on-surface-variant max-w-lg">Запишитесь на профессиональный маникюр или педикюр в самом сердце города. Наши мастера позаботятся о красоте и здоровье ваших рук.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low hover-lift">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant">Телефон</p>
+<a class="font-headline-md text-headline-md hover:text-primary transition-colors" href="tel:+998931133311">+998 93 113 33 11</a>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low hover-lift">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant">Email</p>
+<a class="font-headline-md text-headline-md hover:text-primary transition-colors" href="mailto:info@beautynails.uz">info@beautynails.uz</a>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low hover-lift">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant">Адрес</p>
+<p class="font-headline-md text-headline-md leading-snug">ул. Цветочная, 15, Ташкент</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low hover-lift">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant">Время работы</p>
+<p class="font-headline-md text-headline-md">Пн-Вс: 09:00 - 21:00</p>
+</div>
+</div>
+</div>
+<!-- Social Links -->
+<div class="flex items-center gap-4 pt-4">
+<a class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:border-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:border-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">send</span>
+</a>
+<a class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:border-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+</div>
+</div>
+<!-- Right Side: Booking Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/20 relative overflow-hidden">
+<!-- Background decorative element -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 blur-3xl rounded-full"></div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Онлайн запись</h2>
+<form class="space-y-6 relative z-10" onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant px-1">Имя</label>
+<input class="w-full bg-bg-light-soft border-2 border-transparent focus:border-primary/30 focus:ring-0 rounded-2xl p-4 transition-all" placeholder="Введите ваше имя" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant px-1">Фамилия</label>
+<input class="w-full bg-bg-light-soft border-2 border-transparent focus:border-primary/30 focus:ring-0 rounded-2xl p-4 transition-all" placeholder="Ваша фамилия" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant px-1">Телефон</label>
+<input class="w-full bg-bg-light-soft border-2 border-transparent focus:border-primary/30 focus:ring-0 rounded-2xl p-4 transition-all" placeholder="+998 00 000 00 00" required="" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant px-1">Дата визита</label>
+<input class="w-full bg-bg-light-soft border-2 border-transparent focus:border-primary/30 focus:ring-0 rounded-2xl p-4 transition-all" required="" type="date"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant px-1">Услуга</label>
+<select class="w-full bg-bg-light-soft border-2 border-transparent focus:border-primary/30 focus:ring-0 rounded-2xl p-4 transition-all appearance-none">
+<option>Классический маникюр</option>
+<option>Аппаратный педикюр</option>
+<option>Наращивание ногтей</option>
+<option>SPA-процедуры</option>
+<option>Дизайн (Nail Art)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant px-1">Мастер</label>
+<select class="w-full bg-bg-light-soft border-2 border-transparent focus:border-primary/30 focus:ring-0 rounded-2xl p-4 transition-all appearance-none">
+<option>Любой свободный мастер</option>
+<option>Анна (Топ-мастер)</option>
+<option>Мария (Старший мастер)</option>
+<option>Елена</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant px-1">Комментарий</label>
+<textarea class="w-full bg-bg-light-soft border-2 border-transparent focus:border-primary/30 focus:ring-0 rounded-2xl p-4 transition-all resize-none" placeholder="Ваши пожелания..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary rounded-2xl font-headline-md text-headline-md shadow-xl hover:opacity-90 hover:scale-[0.99] active:scale-[0.97] transition-all" type="submit">Забронировать визит</button>
+</form>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-3xl mx-auto px-gutter mt-section-padding">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">Часто задаваемые вопросы</h2>
+<div class="space-y-4">
+<details class="group bg-surface-container-low rounded-2xl overflow-hidden border border-transparent open:border-primary/10 transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-headline-md text-headline-md">Нужно ли записываться заранее?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-primary/5">
+                        Да, мы рекомендуем записываться за 2-3 дня, особенно если вы хотите попасть к конкретному мастеру или в выходные дни.
+                    </div>
+</details>
+<details class="group bg-surface-container-low rounded-2xl overflow-hidden border border-transparent open:border-primary/10 transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-headline-md text-headline-md">Как долго держится покрытие?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-primary/5">
+                        В среднем наше гель-лак покрытие безупречно носится от 2 до 4 недель, в зависимости от индивидуальных особенностей ногтевой пластины.
+                    </div>
+</details>
+<details class="group bg-surface-container-low rounded-2xl overflow-hidden border border-transparent open:border-primary/10 transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-headline-md text-headline-md">Есть ли у вас гарантия на работу?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-primary/5">
+                        Мы предоставляем 7-дневную гарантию на все виды покрытий. Если возникнет скол или отслойка, мы исправим это бесплатно.
+                    </div>
+</details>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full mt-section-padding h-[500px] relative overflow-hidden bg-surface-container-highest">
+<div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+<div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-primary/20 pointer-events-auto">
+<div class="flex items-center gap-4 mb-2">
+<div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Beauty Nails Salon</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">ул. Цветочная, 15, Ташкент, Узбекистан</p>
+<a class="mt-4 inline-block text-primary font-bold hover:underline" href="#">Открыть в Google Картах</a>
+</div>
+</div>
+<!-- Mock Map Background -->
+<div class="absolute inset-0 grayscale opacity-60 bg-cover bg-center" data-location="Tashkent, Uzbekistan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBARR-ps8WTthqQnlJU0JT_o9LnmVT7cSZWhJIbugKvDdzddH0gDMrTL6Mnpdr5r_qwTpvSpbE3HF_q8WQkWPXQiAV1BZk_sBh_r_nAoyVUlnZHqfmaHhRrH4gm9qhRChOozU09baaz9oM8LSMQHmQ6L9odOm1inhZtNGC-bt95CYrcvk9ADpl3AFrdNr41WDRITNVhTZP7w_qW1wJh7480R2KcrkrC4nYlT6MzhpY8g2d-DwuRKDXeEVHfVUHSWzEO0Fy50WNN9hM')"></div>
+<!-- Decorative overlay to mimic UI map markers -->
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none"></div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-surface-container dark:bg-inverse-surface">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-padding max-w-container-max mx-auto">
+<div class="space-y-6">
+<span class="font-headline-md text-headline-md font-bold text-primary">Beauty Nails</span>
+<p class="font-body-md text-on-surface-variant">Премиальный сервис маникюра и педикюра. Мы создаем красоту, которая вдохновляет.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">send</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md">Навигация</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Главная</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">О нас</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Услуги</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Мастера</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md">Помощь</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Поддержка</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Политика конфиденциальности</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Контакты</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md">Подписаться</h4>
+<p class="font-body-md text-on-surface-variant">Получайте новости о акциях и специальных предложениях.</p>
+<div class="flex gap-2">
+<input class="bg-surface border-none rounded-xl px-4 py-2 w-full focus:ring-2 focus:ring-primary/20" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-xl"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-8 text-center px-gutter">
+<p class="font-body-md text-on-surface-variant opacity-70">© 2024 Beauty Nails Salon. All rights reserved.</p>
+</div>
+</footer>
+<!-- Simple Scroll Interaction -->
+<script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg', 'bg-white/90');
+                header.classList.remove('bg-white/70');
+            } else {
+                header.classList.remove('shadow-lg', 'bg-white/90');
+                header.classList.add('bg-white/70');
+            }
+        });
+
+        // Simple Form Placeholder Logic
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Отправка...';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerText = 'Успешно отправлено!';
+                btn.classList.replace('bg-primary', 'bg-success');
+                form.reset();
+            }, 1500);
+        });
+    </script>
+</body></html>

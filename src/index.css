@@ -1,0 +1,289 @@
+:root {
+  /* Color Palette - Beauty Nails Design System */
+  --surface: #fff8f7;
+  --surface-dim: #f1d3d6;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #fff0f1;
+  --surface-container: #ffe9ea;
+  --surface-container-high: #ffe1e4;
+  --surface-container-highest: #fadbde;
+  --on-surface: #28171a;
+  --on-surface-variant: #5b3f43;
+  
+  --primary: #b80049;
+  --on-primary: #ffffff;
+  --primary-container: #e2165f;
+  --on-primary-container: #fffbff;
+  
+  --secondary: #a23760;
+  --on-secondary: #ffffff;
+  --secondary-container: #fe7faa;
+  --on-secondary-container: #77123f;
+  
+  --tertiary: #006a34;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #008644;
+  --on-tertiary-container: #f6fff3;
+  
+  --accent-deep: #C2185B;
+  --accent-soft: #F06292;
+  --accent-pale: #F8BBD0;
+  
+  --outline: #8f6f73;
+  --outline-variant: #e4bdc2;
+  
+  --error: #F44336;
+  --success: #4CAF50;
+  --warning: #FF9800;
+
+  --bg-gradient: linear-gradient(135deg, #fff8f7 0%, #fff0f1 50%, #ffe9ea 100%);
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(228, 189, 194, 0.55);
+  --shadow-sm: 0 4px 15px rgba(184, 0, 73, 0.05);
+  --shadow-md: 0 10px 30px rgba(184, 0, 73, 0.08);
+  --shadow-lg: 0 20px 40px rgba(184, 0, 73, 0.12);
+  --shadow-glow: 0 0 25px rgba(226, 22, 95, 0.35);
+
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+[data-theme="dark"] {
+  --surface: #121212;
+  --surface-dim: #1a1a1a;
+  --surface-container-lowest: #1e1e1e;
+  --surface-container-low: #242424;
+  --surface-container: #2b2b2b;
+  --surface-container-high: #333333;
+  --surface-container-highest: #3d3d3d;
+  --on-surface: #f5f5f5;
+  --on-surface-variant: #e0c8cc;
+  
+  --primary: #ff4081;
+  --on-primary: #ffffff;
+  --primary-container: #b80049;
+  --on-primary-container: #ffe9ea;
+
+  --secondary: #ff80ab;
+  --on-secondary: #121212;
+  
+  --outline: #7a5c61;
+  --outline-variant: #4e3639;
+
+  --bg-gradient: linear-gradient(135deg, #121212 0%, #1c1518 50%, #261a1d 100%);
+  --card-bg: rgba(36, 36, 36, 0.9);
+  --glass-bg: rgba(30, 30, 30, 0.85);
+  --glass-border: rgba(122, 92, 97, 0.5);
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.8);
+  --shadow-glow: 0 0 25px rgba(255, 64, 129, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-gradient);
+  color: var(--on-surface);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* GLOBAL FORM & INPUT FIXES FOR DARK / LIGHT MODE */
+input, textarea, select {
+  font-family: var(--font-body);
+  color: var(--on-surface) !important;
+  background-color: var(--surface-container-lowest) !important;
+  border: 1px solid var(--outline-variant);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--on-surface);
+  opacity: 0.55;
+}
+
+select option {
+  background-color: var(--surface-container-lowest) !important;
+  color: var(--on-surface) !important;
+}
+
+/* Page Transition Wrapper Animation */
+.page-transition {
+  animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  color: var(--on-surface);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: var(--on-surface);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+/* Standard Box Images (natural aspect ratio, centered in mobile responsive view) */
+.glass-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.glass-card:hover img {
+  transform: scale(1.05);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-deep) 100%);
+  color: #ffffff !important;
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(184, 0, 73, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary * {
+  color: #ffffff !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-glow);
+  filter: brightness(1.1);
+}
+
+.btn-secondary {
+  background: var(--surface-container-high);
+  color: var(--on-surface) !important;
+  border: 1px solid var(--outline-variant);
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: #ffffff !important;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover * {
+  color: #ffffff !important;
+}
+
+/* Responsive Image Centering & Layout Rules */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .glass-card img {
+    height: 220px;
+    object-position: center;
+  }
+
+  .hero-img-container {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
