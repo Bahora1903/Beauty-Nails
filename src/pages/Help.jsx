@@ -80,7 +80,7 @@ const Help = () => {
           <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.8rem' }}>{t('helpPage.noAnswerTitle')}</h3>
           <p style={{ opacity: 0.8, marginBottom: '2rem' }}>{t('helpPage.noAnswerSub')}</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <a href="https://t.me" target="_blank" rel="noreferrer" className="btn-primary">
+            <a href="https://t.me/beautynails_uz" target="_blank" rel="noreferrer" className="btn-primary">
               <Send size={18} />
               <span>{t('helpPage.tgBtn')}</span>
             </a>

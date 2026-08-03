@@ -7,6 +7,7 @@ import { SERVICES_DATA, MASTERS_DATA } from '../data/mockData';
 const Contact = () => {
   const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -19,14 +20,47 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 }
-    });
+    setIsSubmitting(true);
+
+    const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || '8356650091:AAFXnybwEgQxtMMzCXwIvA64GJDGNpgYP5M';
+    const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID || '7932966110';
+
+    const messageText = 
+      `<b>💅 YANGI UCHRASHUV BUYURTMASI (Beauty Nails)</b>\n\n` +
+      `<b>👤 Mijoz:</b> ${formData.firstName} ${formData.lastName}\n` +
+      `<b>📞 Telefon:</b> ${formData.phone}\n` +
+      `<b>📧 Email:</b> ${formData.email || '—'}\n` +
+      `<b>💅 Xizmat:</b> ${formData.service}\n` +
+      `<b>👩‍🎨 Usta:</b> ${formData.master || "Ixtiyoriy (Any)"}\n` +
+      `<b>📅 Sana:</b> ${formData.date}\n` +
+      `<b>⏰ Vaqt:</b> ${formData.time}\n` +
+      `<b>💬 Izoh:</b> ${formData.message || '—'}`;
+
+    try {
+      if (botToken && chatId) {
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: messageText,
+            parse_mode: 'HTML'
+          })
+        });
+      }
+    } catch (err) {
+      console.error('Telegram notification error:', err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
   };
 
   return (
@@ -216,9 +250,14 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem' }}>
-                  <Sparkles size={18} />
-                  <span>{t('contact.submit')}</span>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting} 
+                  className="btn-primary" 
+                  style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem', opacity: isSubmitting ? 0.7 : 1 }}
+                >
+                  <Sparkles size={18} className={isSubmitting ? 'spin-icon' : ''} />
+                  <span>{isSubmitting ? "Yuborilmoqda..." : t('contact.submit')}</span>
                 </button>
 
               </form>

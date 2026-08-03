@@ -44,6 +44,13 @@ const resources = {
         allBtn: "Barcha xizmatlar",
         selectBtn: "Tanlash"
       },
+      categoriesSection: {
+        badge: "Katalog",
+        title: "Xizmat Kategoriyalari",
+        subtitle: "O'zingizga kerakli bo'limni tanlang va xizmatlar bilan batafsil tanishing",
+        viewAll: "Barchasini ko'rish",
+        countServices: "xizmat"
+      },
       testimonials: {
         title: "Mijozlarimiz Fikrlari",
         subtitle: "Salonimiz mehmonlarining samimiy izohlari va taassurotlari"
@@ -190,6 +197,13 @@ const resources = {
         allBtn: "Все услуги",
         selectBtn: "Выбрать"
       },
+      categoriesSection: {
+        badge: "Каталог",
+        title: "Категории Услуг",
+        subtitle: "Выберите интересующий раздел и ознакомьтесь с услугами подробнее",
+        viewAll: "Смотреть все",
+        countServices: "услуг"
+      },
       testimonials: {
         title: "Отзывы Клиентов",
         subtitle: "Искренние отзывы и впечатления гостей нашего салона"
@@ -335,6 +349,13 @@ const resources = {
         subtitle: "Most requested & favorite nail treatments chosen by our clients",
         allBtn: "All Services",
         selectBtn: "Select"
+      },
+      categoriesSection: {
+        badge: "Catalog",
+        title: "Service Categories",
+        subtitle: "Select a category below to explore our signature treatments",
+        viewAll: "View all",
+        countServices: "services"
       },
       testimonials: {
         title: "Client Testimonials",

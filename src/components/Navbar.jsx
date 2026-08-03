@@ -125,6 +125,7 @@ const Navbar = ({ theme, setTheme }) => {
           <div style={{ position: 'relative' }}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              className="lang-toggle-btn"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -141,8 +142,8 @@ const Navbar = ({ theme, setTheme }) => {
               }}
             >
               <Globe size={16} color="var(--primary)" />
-              <span>{currentLangLabel}</span>
-              <ChevronDown size={14} style={{ transform: langDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
+              <span className="lang-label-text">{currentLangLabel}</span>
+              <ChevronDown size={14} className="lang-chevron" style={{ transform: langDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
             </button>
 
             {langDropdownOpen && (
@@ -220,8 +221,8 @@ const Navbar = ({ theme, setTheme }) => {
             {theme === 'light' ? <Moon size={18} /> : <Sun size={18} color="#FFD700" />}
           </button>
 
-          {/* Book Now Button */}
-          <Link to="/contact" className="btn-primary" style={{ padding: '0.6rem 1.2rem', fontSize: '0.88rem' }}>
+          {/* Book Now Button (Hidden on small mobile screens to prevent overflow; available in bottom nav) */}
+          <Link to="/contact" className="btn-primary header-book-btn" style={{ padding: '0.6rem 1.2rem', fontSize: '0.88rem' }}>
             <PhoneCall size={16} />
             <span>{t('nav.bookNow')}</span>
           </Link>
@@ -261,12 +262,14 @@ const Navbar = ({ theme, setTheme }) => {
           background: 'var(--card-bg)',
           backdropFilter: 'blur(24px)',
           WebkitBackdropFilter: 'blur(24px)',
-          padding: '2rem 1.5rem',
+          padding: '1.8rem 1.5rem',
           borderBottom: '1px solid var(--glass-border)',
           display: 'flex',
           flexDirection: 'column',
-          gap: '1.2rem',
+          gap: '1rem',
           boxShadow: 'var(--shadow-lg)',
+          maxHeight: 'calc(100vh - 80px)',
+          overflowY: 'auto',
           animation: 'slideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
         }}>
           <Link to="/" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`}>
@@ -275,9 +278,30 @@ const Navbar = ({ theme, setTheme }) => {
           <Link to="/about" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`}>
             {t('nav.about')}
           </Link>
-          <Link to="/services" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/services') ? 'active' : ''}`}>
-            {t('nav.services')}
-          </Link>
+
+          {/* Services Header & Categories Submenu */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+            <Link to="/services" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/services') ? 'active' : ''}`}>
+              {t('nav.services')}
+            </Link>
+            
+            {/* Category Quick Chips */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', paddingLeft: '0.5rem', paddingTop: '0.2rem' }}>
+              <Link to="/services/manicure" onClick={() => setMobileMenuOpen(false)} className="mobile-cat-chip">
+                💅 {t('services.manicure')}
+              </Link>
+              <Link to="/services/pedicure" onClick={() => setMobileMenuOpen(false)} className="mobile-cat-chip">
+                🦶 {t('services.pedicure')}
+              </Link>
+              <Link to="/services/extension" onClick={() => setMobileMenuOpen(false)} className="mobile-cat-chip">
+                ✨ {t('services.extension')}
+              </Link>
+              <Link to="/services/design" onClick={() => setMobileMenuOpen(false)} className="mobile-cat-chip">
+                🎨 {t('services.design')}
+              </Link>
+            </div>
+          </div>
+
           <Link to="/masters" onClick={() => setMobileMenuOpen(false)} className={`mobile-nav-link ${isActive('/masters') ? 'active' : ''}`}>
             {t('nav.masters')}
           </Link>
@@ -349,16 +373,32 @@ const Navbar = ({ theme, setTheme }) => {
         }
 
         .mobile-nav-link {
-          font-size: 1.15rem;
-          font-weight: 500;
+          font-size: 1.1rem;
+          font-weight: 600;
           color: var(--on-surface);
-          padding: 0.5rem 0;
+          padding: 0.4rem 0;
           border-bottom: 1px dashed var(--glass-border);
           transition: color 0.3s ease;
         }
         .mobile-nav-link.active {
           color: var(--primary);
           font-weight: 700;
+        }
+
+        .mobile-cat-chip {
+          font-size: 0.78rem;
+          font-weight: 600;
+          padding: 0.35rem 0.75rem;
+          background: var(--surface-container-high);
+          color: var(--on-surface);
+          border-radius: var(--radius-full);
+          border: 1px solid var(--outline-variant);
+          text-decoration: none;
+          transition: all 0.2s ease;
+        }
+        .mobile-cat-chip:hover {
+          background: var(--primary);
+          color: #ffffff;
         }
 
         @keyframes fadeIn {
@@ -374,6 +414,19 @@ const Navbar = ({ theme, setTheme }) => {
         @media (max-width: 960px) {
           .desktop-menu { display: none !important; }
           .mobile-toggle { display: flex !important; }
+        }
+
+        @media (max-width: 768px) {
+          .header-book-btn { display: none !important; }
+          .lang-label-text { display: none !important; }
+          .lang-chevron { display: none !important; }
+          .lang-toggle-btn {
+            padding: 0.5rem !important;
+            border-radius: 50% !important;
+            width: 40px !important;
+            height: 40px !important;
+            justify-content: center !important;
+          }
         }
       `}</style>
     </header>

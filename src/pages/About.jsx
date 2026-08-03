@@ -36,7 +36,7 @@ const About = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3.5rem', alignItems: 'center', marginBottom: '5rem' }}>
           <div style={{ borderRadius: '2rem', overflow: 'hidden', border: '4px solid var(--glass-border)', boxShadow: 'var(--shadow-lg)' }}>
             <img 
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop" 
+              src="/images/about/salon-interior.webp" 
               alt="Salon Interior" 
               style={{ width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
             />

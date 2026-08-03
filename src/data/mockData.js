@@ -6,7 +6,7 @@ export const SERVICES_DATA = [
     price: 80000,
     duration: 45,
     difficulty: "Easy",
-    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-1-classic-manicure.webp",
     description: "Klassik tirnoq ishlov berish, kutilikolani tozalash va oziqlantiruvchi moy bilan parvarish qilish."
   },
   {
@@ -16,7 +16,7 @@ export const SERVICES_DATA = [
     price: 100000,
     duration: 50,
     difficulty: "Medium",
-    image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-2-european-manicure.webp",
     description: "Qaychilar va tig'larsiz yumshoq apparat manikyuri. Tirnoq atrofiga zararsiz ishlov."
   },
   {
@@ -26,7 +26,7 @@ export const SERVICES_DATA = [
     price: 150000,
     duration: 60,
     difficulty: "Advanced",
-    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-3-russian-manicure.webp",
     description: "Mukammal chuqur apparat manikyuri. Teriga ideal silliqlik va uzoq muddat saqlanuvchi natija."
   },
   {
@@ -36,7 +36,7 @@ export const SERVICES_DATA = [
     price: 170000,
     duration: 75,
     difficulty: "Medium",
-    image: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-4-gel-polish.webp",
     description: "Mustahkamlovchi baza va rangli gel-lak qoplamasi. 3-4 hafta davomida mukammal jilo."
   },
   {
@@ -46,7 +46,7 @@ export const SERVICES_DATA = [
     price: 180000,
     duration: 80,
     difficulty: "Medium",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-5-french-manicure.webp",
     description: "Nafis va klassik fransuzcha dizayn. Har qanday libos va tadbir uchun ideal tanlov."
   },
   {
@@ -56,7 +56,7 @@ export const SERVICES_DATA = [
     price: 180000,
     duration: 60,
     difficulty: "Advanced",
-    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-6-japanese-care.webp",
     description: "Tabiiy mineral pastalar va asal mumi bilan tirnoqlarni tiklovchi va mustahkamlovchi terapiya."
   },
   {
@@ -66,7 +66,7 @@ export const SERVICES_DATA = [
     price: 200000,
     duration: 90,
     difficulty: "Pro",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-7-spa-manicure.webp",
     description: "Skrab, parafinli niqob, massaj va chuqur namlantiruvchi premium qo'l parvarishi."
   },
   {
@@ -76,7 +76,7 @@ export const SERVICES_DATA = [
     price: 300000,
     duration: 120,
     difficulty: "Expert",
-    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-8-nail-extension.webp",
     description: "Gel yoki poligel yordamida tirnoqlarni professional uzaytirish va forma berish."
   },
   {
@@ -86,7 +86,7 @@ export const SERVICES_DATA = [
     price: 220000,
     duration: 90,
     difficulty: "Advanced",
-    image: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-9-pedicure.webp",
     description: "Oyoq terisi va tirnoqlariga to'liq gigiyenik ishlov berish va massaj."
   },
   {
@@ -96,7 +96,7 @@ export const SERVICES_DATA = [
     price: 50000,
     duration: 30,
     difficulty: "Expert",
-    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop",
+    image: "/images/services/service-10-nail-art.webp",
     description: "Kristallar, stikerlar va qo'lda chiziladigan mualliflik dizaynlari."
   }
 ];
@@ -110,7 +110,7 @@ export const MASTERS_DATA = [
     rating: 4.9,
     reviewsCount: 240,
     completedClients: "3,200+",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+    photo: "/images/masters/master-1-madina.webp",
     skills: ["Russian Manicure", "Gel Polish", "Nail Art", "SPA Care", "Luxury Design"]
   },
   {
@@ -121,7 +121,7 @@ export const MASTERS_DATA = [
     rating: 4.85,
     reviewsCount: 195,
     completedClients: "2,400+",
-    photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
+    photo: "/images/masters/master-2-sevara.webp",
     skills: ["Gel Extension", "Polygel", "French Design", "Ombre Art"]
   },
   {
@@ -132,7 +132,7 @@ export const MASTERS_DATA = [
     rating: 4.95,
     reviewsCount: 310,
     completedClients: "3,800+",
-    photo: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=600&auto=format&fit=crop",
+    photo: "/images/masters/master-3-kamila.webp",
     skills: ["Japanese Care", "Apparat Pedicure", "Paraffin Therapy", "Nail Repair"]
   },
   {
@@ -143,7 +143,7 @@ export const MASTERS_DATA = [
     rating: 4.8,
     reviewsCount: 160,
     completedClients: "1,900+",
-    photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+    photo: "/images/masters/master-4-nigora.webp",
     skills: ["European Manicure", "Express Design", "Gel Polish", "Nail Care"]
   }
 ];
@@ -155,7 +155,7 @@ export const TESTIMONIALS_DATA = [
     rating: 5,
     comment: "Madina xonimning manikyur xizmatidan juda mamnunman! Terimga umuman zarar yetkazmasdan mukammal Russian Manicure qilib berdi. Qoplama 1 oy davomida buzilmay turdi!",
     date: "14 Iyul, 2026",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+    avatar: "/images/avatars/avatar-1-dilnoza.webp"
   },
   {
     id: 2,
@@ -163,7 +163,7 @@ export const TESTIMONIALS_DATA = [
     rating: 5,
     comment: "Очень красивый салон, приятная атмосфера и идеальная стерильность! Инструменты открывают прямо при клиенте. Рекомендую салон Beauty Nails всем знакомым!",
     date: "02 Iyul, 2026",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop"
+    avatar: "/images/avatars/avatar-2-elena.webp"
   },
   {
     id: 3,
@@ -171,7 +171,7 @@ export const TESTIMONIALS_DATA = [
     rating: 5,
     comment: "SPA Manikyur va qo'l massajidan so'ng qo'llarim terisi juda yumshadi va tirnoqlarim sog'lom ko'rinishga keldi. Narxi xizmat sifatiga to'liq mos keladi!",
     date: "28 Iyun, 2026",
-    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&auto=format&fit=crop"
+    avatar: "/images/avatars/avatar-3-malika.webp"
   }
 ];
 

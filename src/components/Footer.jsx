@@ -52,7 +52,7 @@ const Footer = () => {
               <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--surface-container-high)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)' }}>
                 <Share2 size={18} />
               </a>
-              <a href="https://t.me" target="_blank" rel="noreferrer" style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--surface-container-high)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)' }}>
+              <a href="https://t.me/beautynails_uz" target="_blank" rel="noreferrer" style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--surface-container-high)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)' }}>
                 <Send size={18} />
               </a>
               <a href="https://beautynails.uz" target="_blank" rel="noreferrer" style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--surface-container-high)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)' }}>
@@ -81,7 +81,7 @@ const Footer = () => {
               {t('footer.hours')}
             </h4>
             <p style={{ opacity: 0.8, marginBottom: '0.5rem' }}>{t('footer.everyday')}</p>
-            <p style={{ fontSize: '0.85rem', opacity: 0.6 }}>Dam olish kunlarisiz, uzluksiz xizmat ko'rsatamiz.</p>
+            <p style={{ fontSize: '0.85rem', opacity: 0.6 }}>{t('footer.everydaySub')}</p>
           </div>
 
           {/* Contact Info */}
@@ -100,7 +100,7 @@ const Footer = () => {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                 <MapPin size={18} color="var(--primary)" />
-                <span>Toshkent shahri, Amir Temur shoh ko'chasi 45-uy</span>
+                <span>{t('footer.address')}</span>
               </div>
             </div>
           </div>

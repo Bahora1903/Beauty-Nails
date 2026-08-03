@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Search, Clock, Sparkles, Check } from 'lucide-react';
 import { SERVICES_DATA } from '../data/mockData';
 
 const Services = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { category: categoryParam } = useParams();
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const selectedCategory = categoryParam || 'all';
+
+  const handleCategoryClick = (catId) => {
+    if (catId === 'all') {
+      navigate('/services');
+    } else {
+      navigate(`/services/${catId}`);
+    }
+  };
 
   const filteredServices = SERVICES_DATA.filter((service) => {
     const serviceTitle = t(`services.items.${service.id}.title`, { defaultValue: service.title });
@@ -18,6 +29,14 @@ const Services = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+
+  const getCategoryTitle = () => {
+    if (selectedCategory === 'manicure') return t('services.manicure');
+    if (selectedCategory === 'pedicure') return t('services.pedicure');
+    if (selectedCategory === 'extension') return t('services.extension');
+    if (selectedCategory === 'design') return t('services.design');
+    return t('services.title');
+  };
 
   return (
     <div className="page-transition" style={{ paddingTop: '7rem', paddingBottom: '5rem' }}>
@@ -38,9 +57,11 @@ const Services = () => {
             marginBottom: '1rem'
           }}>
             <Sparkles size={16} />
-            <span>{t('services.badge')}</span>
+            <span>{selectedCategory !== 'all' ? `${getCategoryTitle()} ${t('services.badge')}` : t('services.badge')}</span>
           </span>
-          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '1rem' }}>{t('services.title')}</h1>
+          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '1rem' }}>
+            {selectedCategory !== 'all' ? getCategoryTitle() : t('services.title')}
+          </h1>
           <p style={{ opacity: 0.8, fontSize: '1.1rem' }}>{t('services.subtitle')}</p>
         </div>
 
@@ -67,7 +88,7 @@ const Services = () => {
             ].map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
+                onClick={() => handleCategoryClick(cat.id)}
                 style={{
                   padding: '0.6rem 1.4rem',
                   borderRadius: 'var(--radius-full)',

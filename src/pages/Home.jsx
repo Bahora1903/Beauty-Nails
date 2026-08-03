@@ -93,7 +93,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            style={{ position: 'relative' }}
+            className="hero-image-col"
           >
             <div style={{
               position: 'relative',
@@ -105,7 +105,7 @@ const Home = () => {
               maxHeight: '500px'
             }}>
               <img 
-                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/hero/hero-manicure.webp" 
                 alt="Manicure Hero" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
@@ -117,28 +117,95 @@ const Home = () => {
             </div>
 
             {/* Floating Glass Badge */}
-            <div className="glass-panel" style={{
-              position: 'absolute',
-              bottom: '-20px',
-              left: '-15px',
-              padding: '1.2rem 1.5rem',
-              borderRadius: '1.2rem',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '1rem',
-              boxShadow: 'var(--shadow-lg)'
-            }}>
-              <div style={{ width: 48, height: 48, borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
-                <Award size={24} />
+            <div className="glass-panel hero-floating-badge">
+              <div className="hero-badge-icon">
+                <Award className="hero-badge-award" size={24} />
               </div>
               <div>
-                <h4 style={{ fontSize: '1rem', fontWeight: 700 }}>100% Sterillik</h4>
-                <p style={{ fontSize: '0.8rem', opacity: 0.8 }}>Tibbiy avtoklav va kraft-paket</p>
+                <h4 className="hero-badge-title">{t('advantages.sterile')}</h4>
+                <p className="hero-badge-sub">{t('advantages.sterileDesc')}</p>
               </div>
             </div>
           </motion.div>
 
         </div>
+
+        <style>{`
+          .hero-image-col {
+          position: relative;
+        }
+        .hero-floating-badge {
+          position: absolute;
+          bottom: -22px;
+          left: -15px;
+          z-index: 10;
+          padding: 1rem 1.4rem;
+          border-radius: 1.4rem;
+          display: flex;
+          align-items: center;
+          gap: 0.9rem;
+          box-shadow: 0 12px 35px rgba(184, 0, 73, 0.2);
+          max-width: 90%;
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(10px);
+        }
+        .hero-badge-icon {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, var(--primary) 0%, var(--accent-deep, #b80049) 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          flex-shrink: 0;
+          box-shadow: 0 4px 12px rgba(184, 0, 73, 0.3);
+        }
+        .hero-badge-title {
+          font-size: 0.95rem;
+          font-weight: 700;
+          line-height: 1.25;
+        }
+        .hero-badge-sub {
+          font-size: 0.78rem;
+          opacity: 0.8;
+          line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+          .hero-image-col {
+            margin-bottom: 30px;
+          }
+          .hero-floating-badge {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: auto;
+            padding: 0.7rem 1rem;
+            border-radius: 1.2rem;
+            gap: 0.75rem;
+            max-width: calc(100% - 15px);
+            box-shadow: 0 10px 30px rgba(184, 0, 73, 0.25);
+          }
+          .hero-badge-icon {
+            width: 36px;
+            height: 36px;
+          }
+          .hero-badge-award {
+            width: 18px !important;
+            height: 18px !important;
+          }
+          .hero-badge-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+          }
+          .hero-badge-sub {
+            font-size: 0.7rem;
+            opacity: 0.85;
+            line-height: 1.25;
+          }
+        }
+        `}</style>
       </section>
 
       {/* ADVANTAGES */}
@@ -183,6 +250,87 @@ const Home = () => {
               <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>{t('advantages.qualityDesc')}</p>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* CATEGORIES SECTION */}
+      <section style={{ padding: '4.5rem 0 1rem 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3rem auto' }}>
+            <span style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              background: 'var(--surface-container-high)',
+              color: 'var(--primary)',
+              padding: '0.4rem 1.1rem',
+              borderRadius: 'var(--radius-full)',
+              fontSize: '0.88rem',
+              fontWeight: 600,
+              marginBottom: '0.8rem'
+            }}>
+              <Sparkles size={16} />
+              <span>{t('categoriesSection.badge')}</span>
+            </span>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '0.6rem' }}>{t('categoriesSection.title')}</h2>
+            <p style={{ opacity: 0.8 }}>{t('categoriesSection.subtitle')}</p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
+            {[
+              { id: 'manicure', label: t('services.manicure'), icon: '💅', img: '/images/services/service-1-classic-manicure.webp', count: `7 ${t('categoriesSection.countServices')}` },
+              { id: 'pedicure', label: t('services.pedicure'), icon: '🦶', img: '/images/services/service-9-pedicure.webp', count: `3 ${t('categoriesSection.countServices')}` },
+              { id: 'extension', label: t('services.extension'), icon: '✨', img: '/images/services/service-8-nail-extension.webp', count: `2 ${t('categoriesSection.countServices')}` },
+              { id: 'design', label: t('services.design'), icon: '🎨', img: '/images/services/service-5-french-manicure.webp', count: `4 ${t('categoriesSection.countServices')}` }
+            ].map((cat) => (
+              <Link 
+                key={cat.id}
+                to={`/services/${cat.id}`}
+                className="glass-card"
+                style={{
+                  padding: '1.5rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderRadius: '1.5rem'
+                }}
+              >
+                <div style={{
+                  width: '70px',
+                  height: '70px',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  marginBottom: '1rem',
+                  border: '3px solid var(--primary-container)',
+                  boxShadow: 'var(--shadow-md)'
+                }}>
+                  <img src={cat.img} alt={cat.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.3rem', color: 'var(--on-surface)' }}>
+                  {cat.icon} {cat.label}
+                </h3>
+                <span style={{ fontSize: '0.82rem', color: 'var(--primary)', fontWeight: 700 }}>
+                  {cat.count}
+                </span>
+                <span style={{
+                  marginTop: '1rem',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.3rem',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  color: 'var(--primary)'
+                }}>
+                  <span>{t('categoriesSection.viewAll')}</span>
+                  <ArrowRight size={14} />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
