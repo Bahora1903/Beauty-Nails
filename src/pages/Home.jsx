@@ -144,10 +144,12 @@ const Home = () => {
           display: flex;
           align-items: center;
           gap: 0.9rem;
-          box-shadow: 0 12px 35px rgba(184, 0, 73, 0.2);
+          box-shadow: var(--shadow-md);
           max-width: 90%;
-          background: rgba(255, 255, 255, 0.9);
-          backdrop-filter: blur(10px);
+          background: var(--card-bg);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border: 1px solid var(--glass-border);
         }
         .hero-badge-icon {
           width: 44px;
@@ -165,11 +167,27 @@ const Home = () => {
           font-size: 0.95rem;
           font-weight: 700;
           line-height: 1.25;
+          color: var(--on-surface);
         }
         .hero-badge-sub {
           font-size: 0.78rem;
-          opacity: 0.8;
+          color: var(--on-surface-variant);
+          opacity: 0.9;
           line-height: 1.3;
+        }
+
+        /* Explicit Dark Mode Overrides for High Contrast */
+        [data-theme="dark"] .hero-floating-badge {
+          background: rgba(28, 28, 32, 0.95) !important;
+          border: 1px solid rgba(255, 255, 255, 0.15) !important;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+        }
+        [data-theme="dark"] .hero-badge-title {
+          color: #ffffff !important;
+        }
+        [data-theme="dark"] .hero-badge-sub {
+          color: #e2e8f0 !important;
+          opacity: 0.95 !important;
         }
 
         @media (max-width: 768px) {
@@ -179,13 +197,13 @@ const Home = () => {
           .hero-floating-badge {
             position: absolute;
             bottom: -20px;
-            left: 0;
-            right: auto;
-            padding: 0.7rem 1rem;
+            left: 10px;
+            right: 10px;
+            padding: 0.75rem 1rem;
             border-radius: 1.2rem;
             gap: 0.75rem;
-            max-width: calc(100% - 15px);
-            box-shadow: 0 10px 30px rgba(184, 0, 73, 0.25);
+            max-width: calc(100% - 20px);
+            box-shadow: var(--shadow-md);
           }
           .hero-badge-icon {
             width: 36px;
@@ -198,10 +216,12 @@ const Home = () => {
           .hero-badge-title {
             font-size: 0.85rem;
             font-weight: 700;
+            color: var(--on-surface);
           }
           .hero-badge-sub {
-            font-size: 0.7rem;
-            opacity: 0.85;
+            font-size: 0.72rem;
+            color: var(--on-surface-variant);
+            opacity: 0.95;
             line-height: 1.25;
           }
         }

@@ -20,6 +20,49 @@ const Contact = () => {
     message: ''
   });
 
+const getPublicIp = async () => {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 2000);
+    const response = await fetch('https://api.ipify.org?format=json', { signal: controller.signal });
+    clearTimeout(timeoutId);
+    if (!response.ok) return '—';
+    const data = await response.json();
+    return data.ip || '—';
+  } catch {
+    return '—';
+  }
+};
+
+const getDeviceInfo = () => {
+  const ua = navigator.userAgent;
+  let os = 'Windows';
+  if (ua.includes('Win')) os = 'Windows';
+  else if (ua.includes('Mac')) os = 'macOS';
+  else if (ua.includes('Linux')) os = 'Linux';
+  else if (ua.includes('Android')) os = 'Android';
+  else if (ua.includes('iPhone') || ua.includes('iPad') || ua.includes('iOS')) os = 'iOS';
+
+  let browser = 'Chrome';
+  if (ua.includes('Edg')) browser = 'Edge';
+  else if (ua.includes('OPR') || ua.includes('Opera')) browser = 'Opera';
+  else if (ua.includes('Chrome')) browser = 'Chrome';
+  else if (ua.includes('Safari')) browser = 'Safari';
+  else if (ua.includes('Firefox')) browser = 'Firefox';
+
+  return `${os} • ${browser}`;
+};
+
+const getFormattedDateTime = () => {
+  const now = new Date();
+  const d = String(now.getDate()).padStart(2, '0');
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  const y = now.getFullYear();
+  const hh = String(now.getHours()).padStart(2, '0');
+  const mm = String(now.getMinutes()).padStart(2, '0');
+  return `${d}.${m}.${y} ${hh}:${mm}`;
+};
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -27,16 +70,53 @@ const Contact = () => {
     const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || '8356650091:AAFXnybwEgQxtMMzCXwIvA64GJDGNpgYP5M';
     const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID || '7932966110';
 
+    const userIp = await getPublicIp();
+    const nowStr = getFormattedDateTime();
+    const deviceStr = getDeviceInfo();
+    const pageUrl = window.location.href;
+
+    const clientName = `${formData.firstName} ${formData.lastName}`.trim();
+    const emailVal = formData.email ? formData.email : '—';
+    const masterVal = formData.master ? formData.master : '—';
+    const commentVal = formData.message ? `\n\n💬 <b>Комментарий</b>\n${formData.message}` : '';
+
     const messageText = 
-      `<b>💅 YANGI UCHRASHUV BUYURTMASI (Beauty Nails)</b>\n\n` +
-      `<b>👤 Mijoz:</b> ${formData.firstName} ${formData.lastName}\n` +
-      `<b>📞 Telefon:</b> ${formData.phone}\n` +
-      `<b>📧 Email:</b> ${formData.email || '—'}\n` +
-      `<b>💅 Xizmat:</b> ${formData.service}\n` +
-      `<b>👩‍🎨 Usta:</b> ${formData.master || "Ixtiyoriy (Any)"}\n` +
-      `<b>📅 Sana:</b> ${formData.date}\n` +
-      `<b>⏰ Vaqt:</b> ${formData.time}\n` +
-      `<b>💬 Izoh:</b> ${formData.message || '—'}`;
+`📩 <b>Новая заявка с сайта</b>
+
+👤 <b>Клиент</b>
+Имя: ${clientName}
+
+📞 <b>Телефон</b>
+${formData.phone}
+
+✉️ <b>Email</b>
+${emailVal}
+
+💅 <b>Услуга</b>
+${formData.service}
+
+👩🎨 <b>Мастер</b>
+${masterVal}
+
+📅 <b>Дата и время</b>
+Дата: ${formData.date}
+Время: ${formData.time}${commentVal}
+
+━━━━━━━━━━━━━━━━━━
+
+🌐 <b>Страница</b>
+${pageUrl}
+
+🕒 <b>Дата отправки</b>
+${nowStr}
+
+🌍 <b>IP</b>
+${userIp}
+
+💻 <b>Устройство</b>
+${deviceStr}
+
+━━━━━━━━━━━━━━━━━━`;
 
     try {
       if (botToken && chatId) {
